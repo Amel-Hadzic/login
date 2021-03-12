@@ -1,90 +1,230 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <!DOCTYPE html>
 
-    <title>Signin Template for Bootstrap</title>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <meta charset="UTF-8">
+     <title>WeebThing</title>
+     
+     <style>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
-
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-  </head>
-
-  <body class="text-center">
-      <style>
-          html,
-body {
-  height: 100%;
+         *{
+             padding:0;
+             margin:0;
+             box-sizing: border-box;
+         }
+         ::-webkit-scrollbar {
+    display: none;
+}
+         
+         body{
+             background:#eee;
+             font-family:sans-serif;
+             
+             
 }
 
-body {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-}
+         
+         
+         .banner-area{
+             width:100%;
+             height:100vh;
+            
+             background-size:cover;
+         }        
+         
+         .content-area{
+             height:100%;
+             display:flex;
+             justify-content: center;
+             align-items: center;
+         }
+         
+        .content{
+             text-align: center;
+         }
+         
+         .content h1{
+             font-size:80px;
+             color:#fff;
+         }
+         
+         .content p{
+             font-size:30px;
+             color:#ddd;
+         }
+         
+         .btn{
+           display: inline-block;
+             border:none;
+             outline:none;
+             text-decoration:none;
+             padding:15px;
+             margin-top:100px;
+             border-radius: 4px;
+             color:#eee;
+             font-size: 18px;
+             cursor: pointer;    
+             background:#F44336;             
+         }
+         
+       
+         .secondH{
 
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-.form-signin .checkbox {
-  font-weight: 400;
-}
-.form-signin .form-control {
+          text-align: center;
+          font-family:'Times New Roman', Times, serif;
+          font-size: 30px;
+         }
+         h1{
+            font-family:'Times New Roman', Times, serif;
+            font-size: 90px;
+         }
+
+         .H2{
+             font-size: 25px;
+         }
+         .container {
+             width: 70%;
+             margin: 50px auto;
+             padding: 10px;
+ }
+ 
+         .container .box {
+             width: 100%;
+             padding: 50px;
+             background: #fff;
+             margin-top: 50px;
+             border-radius: 10px;
+             box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
+         }
+
+         .video-background-holder {
   position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
+  background-color: black;
+  height: calc(100vh - 72px);
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
 }
-.form-signin .form-control:focus {
+
+.video-background-holder video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-background-content {
+  position: relative;
   z-index: 2;
 }
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+
+.video-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
 }
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-      </style>
-    <form class="form-signin">
-      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Prijavi se molim te</h1>
-      <label for="inputEmail" class="sr-only">Email</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email " required autofocus>
-      <label for="inputPassword" class="sr-only">Šifra</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Šifra" required>
-      <div class="checkbox mb-3">
-        <label>
-          
-        </label>
+         
+     </style>
+ </head>
+ <body>
+     
+
+
+<div class="video-background-holder">
+    <div class="video-background-overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="FallingStars.mp4" type="video/mp4">
+      </video>
+    <div class="video-background-content container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+            <h1>WeebThing</h1>
+               
+            <p class=H2>Watch here for free and enjoy!!</p>
+            
+            <a class="btn show-message" amelova-message="Be weeb with me!" href="#">Watch</a>
+          </p>
+        </div>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Prijav se</button>
-      
-    </form>
-  </body>
-</html>
+    </div>
+  </div>
+  
+ 
+    <div class="container">
+        <div class="box">
+          <p class="secondH">What is anime??</p>
+            <p>
+              Anime is hand-drawn and computer animation originating from Japan. In Japan and in Japanese, 
+              anime (a term derived from the English word animation),
+               describes all animated works, regardless of style or origin. Outside of Japan and in English,
+                anime is colloquial for Japanese animation and refers specifically to animation produced in Japan. Animation produced outside of Japan with similar style to Japanese animation is referred to as anime-influenced animation.
+            </p>
+        </div>
+        
+        <div class="box">
+            <p class="secondH">Recommendation</p>
+            <p>
+                If you are new to anime and it is hard for you to find something to watch,I can help.Here is a link to a list of good starter anime: <a href="https://screenrant.com/best-anime-for-beginners/">List    </a>
+            </p>
+        </div>
+        
+        <div class="box">
+            <p class="secondH">Anime genres</p>
+            <p>
+                Did you know that there are different types of anime? The five types are shonen, shojo, seinen, josei, and kodomomuke. Each kind of anime is focused on a specific target.Ther are more new genres every year,so if you want to know more about them here you go: <a href="https://www.looper.com/189420/anime-genres-explained/">List</a>
+            </p>
+        </div>
+        
+        <div class="box">
+            <p class="secondH">About us</p>
+            <p>
+                Actually it is only writing ,it is my school project that I like.I am a calssic anime watcher and I wanted to make my own page.In the next page there will be only few animes to choose from,because I have no time for more to upload.I hope you like my page :>
+            </p>
+        </div>
+    </div>
+     
+ </body>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <script type="text/javascript">
+$(document).ready(()=>{
+    
+    showMessage =(message)=>{
+        
+        Swal.fire({
+            title: 'Sweet!',
+            text: message,
+            imageUrl: 'https://i.pinimg.com/originals/64/5e/e9/645ee90508bae1e204d035b6540fbdfe.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'IZVINI',
+        }).then(()=>{
+            window.location.href ="file:///C:/Users/Amel/Desktop/Anime%20page/projekat2.html";
+        });
+    };
+
+    $(".show-message").on("click", function(){
+         const message = $(this).attr("amelova-message");
+         showMessage(message);
+         
+    });
+});
+</script>
+ </html>
